@@ -5,8 +5,23 @@
 	<title>HTML CSS最終作業</title>
 
 	<link rel="shortcut icon" href="img/favicon.ico">
+	
+	<meta name='description' content='網站描述文字' />
+	<meta property="og:title" content="鄭雅倩ＨＴＭＬ作業" />
+    <meta property="og:description" content="這是鄭雅倩的ＨＴＭＬ作業，請問任意轉載">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="FB上的網址" />
+    <meta property="og:image" content="img/logo.png" />
+
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+ 	<link rel="stylesheet" href="css/nivo-slider.css">
+  	<link rel="stylesheet" href="css/themes/default/default.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/all.js"></script>
 </head>
 <body>
 	<div class="wrap">
@@ -28,39 +43,52 @@
 			<h1>
 				<a href="#">Hex School</a>
 			</h1>
-			<ul>
-				<li>
-					<a href="#">聯絡我們</a>
-				</li>
+			<ul class="topmenu">
+				<li><a href="#">首頁</a></li>
 				<li>
 					<a href="#">產品介紹</a>
+					<ul class="dropdown-open">
+						<li><a href="#">HTML5</a></li>
+						<li><a href="#">RWD</a></li>
+						<li><a href="#">jQuery</a></li>
+					</ul>
 				</li>
-				<li>
-					<a href="#">首頁</a>
-				</li>
+				<li><a href="#">聯絡我們</a></li>
 			</ul>	
 		</div>
 		<div class="banner">
-			<img src="img\banner.png" alt="">
+			<div class="theme-default">
+			  <div id="slider" class="nivoSlider">
+        		<img src="img/banner-1.jpg"   /> 
+        		<img src="img/banner-2.jpg"  />     
+        		<img src="img/banner-3.jpg"  /> 
+        	  </div>
+      		</div>
 		</div>
 		<div class="content">
 			<ul>
 				<li>
-					<img src="img\html5.png" alt="">
+					<a href="img\html5_b.png" data-lightbox="example" data-title="圖片標題一">
+						<img src="img\html5.png" alt="">
+					</a>
 					<h2>Html 5基礎教學</h2>
 					<p>
 					主流前端網站設計的基礎就在六角學院，在這裡不在是填鴨式教學，而是透過實際的範例，瞭解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。
 					</p>
 				</li>
 				<li class="img_rwd">
-					<img src="img\RWD.png" alt="">
+					<a href="img\rwd_b.png" data-lightbox="example" data-title="圖片標題二">
+						<img src="img\RWD.png" alt="">
+					</a>
 					<h2>響應式網站設計</h2>
 					<p>
 					響應式網站設計 (Responsive web design)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生瞭解行動版開發技巧。	
 					</p>
 				</li>
 				<li>
-					<img src="img\jquery.png" alt="">
+					<a href="img\jquery_b.png" data-lightbox="example" data-title="圖片標題三">
+						<img src="img\jquery.png" alt="">
+					</a>					
 					<h2>jQuery 實戰教學</h2>
 					<p>
 					．本課程有以下特色<br>
@@ -74,7 +102,7 @@
 		</div>
 		<div class="clearfix"></div>
 		<div class="compare">
-			<h1>線上及實體課程的比較</h1>
+			<h2>線上及實體課程的比較</h2>
 			<table>
 			<tr>
 				<th>項目</th>
@@ -123,15 +151,13 @@
 		</div>
 		
 		<div class="user">
-			<h1>對我們課程有興趣嗎?</h1>
-			<h2>歡迎留下您的資料</h2>
-			<div class="form1">
-				<form action="index.html">
-					<textarea name="note"></textarea>
-				</form>
-			</div>
-			<div class="form2">
-				<form action="index.html">
+			<h2>對我們課程有興趣嗎?</h2>
+			<h3>歡迎留下您的資料</h3>
+			<form action="index.html">
+				<div class="form-content">
+				<textarea name="note"></textarea>
+				</div>
+				<div class="form-contact">
 					<label for="name">姓名：	</label>
 					<input id="name" type="text" class="user_data" name="name" placeholder="六角講師">
 					<label for="tel">電話：	</label>
@@ -139,20 +165,22 @@
 					<label for="mail">信箱：	</label>
 					<input id="mail" type="text" class="user_data" name="mail" placeholder="hexshool@mail.com">
 					<input type="submit" class="submit" value="送出">
-				</form>		
-			</div>			
+				</div>			
+			</form>		
 		</div>
 
 		<div class="footer">
-			<div class="box1">
+			<div class="box-logo">
 				<img src="img\footer-logo.png" alt="">
 			</div>
-			<div class="box2">
+			<div class="box-contact">
 				<p><span>聯絡我們：</span> <span class="word_pink">hexschool@gmail.com</span></p>
 				<p><span>電話：</span> <span class="word_pink">0999123456</span></p>
 			</div>
 		</div>
 
 	</div>
+	<script src="js/lightbox-plus-jquery.min.js"></script>
+  	<script src="js/jquery.nivo.slider.js"></script>
 </body>
 </html>

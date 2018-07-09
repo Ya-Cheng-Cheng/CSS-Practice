@@ -65,7 +65,6 @@ table {
 	float: right;
 }
 .bar li{
-	display: block;
 	float: left;
 	padding: 5px 10px;
 }
@@ -96,7 +95,6 @@ table {
 	background-repeat: no-repeat;
 	width: 174px;
 	height: 36px;
-	display: block;
 	text-indent: 101%;
 	overflow: hidden;
 	white-space: nowrap;
@@ -105,27 +103,41 @@ table {
 	cursor: pointer;
 	box-shadow: 0px 0px 5px#ccc;
 }
-
-.header li a{
-	color: #09ce9d;
-	display: block;
+.topmenu{
 	float: right;
+}
+.topmenu li{
+	float: left;
+}
+.topmenu a{
+	color: #09ce9d;
 	line-height: 36px;
-	padding-left:10px;
-	padding-right:10px;
-	padding-top:5px;
-	padding-bottom:5px;
+	padding: .5em 0;
+	display: block;
+	text-align: center;
 	text-decoration: none;
+	transition: all .3s
+
 }
 
-.header li a:hover{
+.topmenu a:hover{
 	background:#09ce9d;
  	color:#fff;
 }
+.topmenu > li{
+	float: left;
+	width: 100px;
 }
 
-.banner img{
-	margin: 10px;
+.topmenu ul{
+	display: none;
+}
+.topmenu li:hover ul{
+	display: block;
+}
+.dropdown-open li{
+	width: 100px;
+	border:1px solid #09ce9d;
 }
 
 .content ul{
@@ -165,7 +177,7 @@ table {
 }
 
 
-.compare h1{
+.compare h2{
 	text-align: center;
 	font-size: 24px;
 	margin-top: 30px;
@@ -193,15 +205,15 @@ table {
 	background: -moz-linear-gradient(#00644b,#009771);
 	position: relative;
 }
-.user h1, .user h2{
+.user h2, .user h3{
 	color: #fff;
 	font-size: 24px;
 	text-align: center;
 }
-.user h1{
+.user h2{
 	padding-top: 40px;
 }
-.user h2{
+.user h3{
 	padding: 20px;
 }
 .user div{
@@ -209,14 +221,14 @@ table {
 	display: block;
 	float: left;
 }
-.user .form1 textarea{
+.user .form-content textarea{
 	margin-left: 20px;
 	border: 1px solid #009771;
 	border-radius: 5px;
 	height: 250px;
 	width: 450px;
 }
-.user .form2 .user_data{
+.user .form-contact .user_data{
 	margin: 10px 0px;
 	border: 1px solid #009771;
 	border-radius: 5px;
@@ -224,18 +236,18 @@ table {
 	height: 30px;
 	width: 480px;
 }
-.user .form2 .user_data:focus{
+.user .form-contact .user_data:focus{
 	background: #FFFF99;
 	border: 3px solid #fff;
 }
-.user .form1 textarea:focus{
+.user .form-content textarea:focus{
 	background: #FFFF99;
 	border: 3px solid #fff;
 }
-.user .form2 label{
+.user .form-contact label{
 	color: #fff;
 }
-.user .form2 .submit{
+.user .form-contact .submit{
 	background: #09ce9d;
     color: #fff;
     border: 1px solid #09ce9d;
@@ -247,7 +259,7 @@ table {
     bottom: 20px;
     font-size: 18px;
 }
-.user .form2 .submit:hover{
+.user .form-contact .submit:hover{
 	/*background: #00FFCC;*/
 	background: radial-gradient(#00F0F0, #00BDBD, #00A3A3);
 	background: -webkit-linear-gradient(#00F0F0, #00BDBD, #00A3A3);
@@ -259,15 +271,15 @@ table {
 .footer{
 	margin: 30px 20px;
 }
-.footer .box1{
+.footer .box-logo{
 	display: block;
 	float: left;
 }
-.footer .box2{
+.footer .box-contact{
 	padding-left: 650px;
 }
 
-.footer .box2 p{
+.footer .box-contact p{
 	padding: 5px;
 }
 .word_pink{
