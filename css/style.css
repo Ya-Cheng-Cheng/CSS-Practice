@@ -286,6 +286,22 @@ table {
 	color: #f581b7;
 }
 
+.gotop{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
 
-
+.gotop-close{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	text-decoration: none;
+	color: gray;
+	padding: .5em;
+}
+.gotop-close:hover{
+	color: red;
+}
 
